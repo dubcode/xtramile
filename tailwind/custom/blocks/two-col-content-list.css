@@ -1,0 +1,50 @@
+.tcclx {
+    @apply bg-gray-dark py-32 text-white-light;
+}
+
+.tcclx__grid {
+    @apply lg:flex;
+}
+
+.tcclx__col-one {
+    @apply lg:w-2/5;
+}
+
+.tcclx__col-two {
+    @apply lg:w-3/5 lg:pl-24;
+}
+
+.tcclx__title {
+    @apply block font-medium tracking-wide font-colombo uppercase leading-snug text-2xl mb-8 md:text-3xl xl:text-4xl 2xl:text-5xl;
+}
+
+.tcclx__excerpt p {
+    @apply mb-8;
+}
+
+.tcclx li {
+    background: url('assets/img/hex-yellow.svg') no-repeat 0 12px;
+    background-size: 16px 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    @apply py-2 pb-8 pl-8 lg:pb-2;
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .tcclx ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 2rem;
+        grid-auto-flow: row;
+    }
+  
+    @media all and (-ms-high-contrast:none) {
+        .tcclx ul {
+        display: -ms-grid;
+        -ms-grid-columns: 1fr 1fr;
+        -ms-grid-rows: 1fr 1fr;
+        }
+    }
+
+}

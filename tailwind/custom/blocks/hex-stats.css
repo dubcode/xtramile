@@ -1,0 +1,111 @@
+.hex-stats {
+    @apply block text-gray-dark lg:flex lg:flex-wrap lg:justify-center lg:items-start py-16;
+}
+
+.hex-stats__section {
+    @apply overflow-hidden;
+}
+
+.hex-stats__container {
+    @apply relative;
+}
+
+.hex-stats__bg {
+    @apply hidden lg:block absolute top-0 left-0 h-[249px] w-full lg:w-[278px] xl:h-[321px] xl:w-[360px];
+    transform: rotate(-15deg) translateX(-16.5%) translateY(-50%) scale(1.2);
+    transform-origin: center center;
+}
+
+.hex-stats__bg svg .st0 {
+    fill: var(--green);
+    stroke: var(--green);
+}
+
+.hex-stats__intro {
+    @apply block lg:flex mb-8 lg:mb-32;
+    z-index: 1;
+}
+
+.hex-stats__header {
+    @apply block lg:w-2/4;
+}
+
+.hex-stats__title {
+    @apply block font-medium tracking-wide font-colombo uppercase leading-snug text-2xl mb-8;
+}
+
+.hex-stats__excerpt {
+    @apply mb-8 lg:w-2/4;
+}
+
+.hex-stats__stats {
+    @apply flex justify-center items-center w-full;
+}
+
+.hex-stats__stats ul { 
+    @apply flex flex-wrap justify-between items-center lg:flex-nowrap lg:w-full;
+}
+
+.hex-stats__stats ul li {
+    flex-grow: 0;
+    flex-shrink: 0;
+    @apply relative h-[249px] w-full lg:w-[278px] xl:h-[321px] xl:w-[360px] mb-8;
+}
+
+.hex-stats__stats ul li:last-child {
+    @apply mb-0 lg:mb-8;
+}
+
+.hex-stats__stats ul li .hex-stats__list-content {
+    @apply text-gray-dark;
+}
+
+.hex-stats__stats ul li.hex-stats__grey  .hex-stats__list-content {
+    @apply text-white;
+}
+
+.hex-stats__icon,
+.hex-stats__icon svg {
+    @apply block h-full w-full;
+}
+
+
+.hex-stats__icon {
+    transform: rotate(-15deg);
+    transform-origin: center center;
+}
+
+.hex-stats__icon svg .st0 {
+    stroke-miterlimit:10;
+    transition: all ease 0.3s
+}
+
+.hex-stats__grey .hex-stats__icon svg .st0 {
+    fill: var(--dark-grey);
+    stroke: var(--dark-grey);
+}
+
+.hex-stats__yellow .hex-stats__icon svg .st0 {
+    fill: var(--yellow);
+    stroke: var(--yellow);
+}
+
+.hex-stats__green .hex-stats__icon svg .st0 {
+    fill: var(--green);
+    stroke: var(--green);
+}
+
+.hex-stats__list-inner {
+    @apply flex items-center justify-center absolute h-full w-full top-0 left-0 text-left px-24;
+    color: var(--white-dark);
+}
+
+.hex-stats__list-title {
+    @apply block font-medium tracking-wide font-colombo uppercase text-4xl pb-2 mb-2;
+    line-height: 2rem;
+    border-bottom: 1px solid var(--dark-grey);
+}
+
+.hex-stats__stats ul li.hex-stats__grey .hex-stats__list-title {
+    border-bottom: 1px solid var(--white);
+}

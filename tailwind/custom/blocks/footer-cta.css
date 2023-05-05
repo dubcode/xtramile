@@ -1,0 +1,102 @@
+/* BLOCK - Talk */
+.talk {
+    @apply bg-gray-dark py-24 relative;
+}
+
+.talk__title {
+    @apply block text-yellow font-medium tracking-wide font-colombo uppercase leading-snug mb-8 w-full text-8xl xl:text-[140px];
+    line-height: 1;
+}
+
+.talk__excerpt p {
+    @apply block leading-snug text-lg text-white-dark mb-8 lg:pr-[25%] xl:pr-[33.33%] 2xl:pr-[50%];
+}
+
+/* FOLLOW */
+.follow__wrapper {
+    @apply block absolute top-0 right-0 h-auto max-w-[280px] md:max-w-[380px] lg:max-w-[450px] w-3/4 translate-x-[25%] translate-y-[-60%] sm:translate-y-[-55%] lg:translate-y-[-40%] lg:w-2/4 2xl:max-w-[600px];
+}
+
+.follow {
+    @apply block relative float-right h-auto w-full;
+}
+
+.follow__bg {
+    @apply relative h-auto w-full;
+    transform-origin: center center;
+    transform: rotate(-25deg);
+}
+
+.follow__inner {
+    @apply absolute flex items-center justify-start top-0 left-0 h-full w-full z-10;
+    padding: 0 0 0 20%;
+
+}
+
+.follow__grid {
+    @apply relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem 0;
+    grid-auto-flow: row;
+}
+  
+@media all and (-ms-high-contrast:none) {
+    .follow__grid {
+        display: -ms-grid;
+        -ms-grid-columns: 1fr 1fr;
+        -ms-grid-rows: 1fr 1fr;
+    }
+}
+
+.follow__grid .follow__grid-cell:nth-child(even) {
+    transform: translateX(-33.33%) translateY(50%);
+}
+
+.follow__title {
+    @apply block text-gray-dark text-center font-black font-colombo uppercase leading-snug mb-8 text-2xl w-full;
+}
+
+.follow__grid svg {
+    height: auto;
+    width: 40px;
+}
+
+.follow svg .fsvg-outline {
+    fill: none;
+    stroke: var(--dark-grey);
+    transition: all ease 0.3s;
+}
+
+.follow svg .fsvg-fill {
+    fill: var(--dark-grey);
+    transition: all ease 0.3s;
+}
+
+.follow svg .fsvg-outline {
+    fill: none;
+    stroke: var(--dark-grey);
+}
+
+.follow__grid-cell:hover svg .fsvg-fill {
+    fill: var(--yellow);
+}
+
+.follow__grid-cell:hover svg .fsvg-outline {
+    fill: var(--dark-grey);
+    stroke: var(--dark-grey);
+}
+
+@media only screen and (min-width: 1280px) {
+    .follow__grid svg {
+        height: auto;
+        width: auto;
+    }
+    .follow__grid .follow__grid-cell:nth-child(even) {
+        transform: translateX(0) translateY(50%);
+    }
+    .follow__wrapper {
+        transform: translateX(25%) translateY(-25%);
+    }
+}

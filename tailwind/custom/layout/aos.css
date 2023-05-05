@@ -1,0 +1,22 @@
+/* AOS */
+[data-aos="parallax"] .parallax-content {
+    transform: translate3d(0, -50%, 0);
+  }
+
+  .scroll-in-left {
+    position: relative;
+    left: 0;
+    transform: translateX(0);
+  }
+
+  .scroll-in-right {
+    position: relative;
+    right: 0;
+    transform: translateX(0);
+  }
+
+  .scroll-in-up {
+    position: relative;
+    top: 0;
+    transform: translateY(0);
+  }

@@ -1,0 +1,22 @@
+/* PAGE HERO */
+.plain-header {
+    @apply relative h-auto w-full lg:h-[500px];
+}
+
+.plain-header__overlay {
+    @apply pt-64 lg:pt-0 h-full w-full;
+    background: rgba(33, 34, 34, 0.7);
+}
+
+.plain-header__inner {
+    @apply flex items-end justify-start h-full w-full pb-24;
+}
+
+.plain-header__content {
+    @apply block w-full;
+}
+
+.plain-header__title {
+    @apply text-left font-colombo text-white-dark font-medium uppercase block tracking-wide p-0 md:pr-[25%] xl:pr-[33.33%] text-5xl md:text-6xl;
+    line-height: 1.2;
+}

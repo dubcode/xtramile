@@ -1,0 +1,29 @@
+/* BLOCK - SHOWREEL HERO */
+.showreel,
+.showreel__inner {
+  @apply min-h-screen w-full block overflow-hidden relative;
+}
+
+.showreel__inner video {
+  @apply object-cover w-full h-full fixed top-0;
+  z-index: -1;
+}
+
+.showreel__overlay {
+  @apply flex justify-start items-center h-full w-full absolute;
+}
+
+.showreel__title {
+  @apply text-left font-colombo;
+}
+
+.showreel__title span {
+    @apply text-yellow font-medium uppercase block tracking-wide text-5xl md:text-6xl lg:text-[60px];
+    line-height: 1.2;
+}
+
+.showreel__title span:first-child {
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--white);
+}

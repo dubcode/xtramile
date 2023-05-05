@@ -1,0 +1,49 @@
+.team-members {
+    @apply text-white-light bg-black-light pt-16 pb-0 md:pt-16 md:pb-16;
+}
+
+.team__title {
+    @apply block font-medium tracking-wide font-colombo uppercase leading-snug text-2xl mb-8 md:text-3xl xl:text-4xl 2xl:text-5xl;
+}
+
+.team-members__grid {
+    @apply py-16;
+}
+
+.team-members__grid ul {
+    @apply block;
+}
+
+.team-members__grid li {
+    @apply mb-8 w-full;
+}
+
+.team-member {
+    @apply flex items-start text-center h-full w-full;
+}
+
+.team-member__mask {
+    -webkit-mask: url('assets/img/hex.svg') center top / contain;
+    mask: url('assets/img/hex.svg') center top / contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+}
+
+.team-member__mask img {
+    @apply h-auto w-full;  
+}
+
+.team-member__name {
+    @apply block font-medium tracking-wide font-colombo uppercase leading-snug text-2xl mb-2;
+}
+
+@media only screen and (min-width: 768px) {
+    .team-members__grid ul {
+        @apply flex justify-between flex-wrap;
+    }
+    .team-members__grid li {
+        width: calc(33% - 1rem);
+    }
+}

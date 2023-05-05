@@ -1,0 +1,94 @@
+.cta-btn__grid {
+    @apply bg-white-light block float-left w-full;
+}
+
+.cta-btn__grid.cta__bg {
+    padding-top: 50vh;
+}
+
+.cta-btn__grid .container {
+    @apply flex items-center justify-start p-0 m-0;
+}
+
+.cta-btn {
+    @apply block float-left relative;
+    height: 140px;
+    padding: 0 55px 0 0;
+    width: calc(100% - 18px);
+}
+
+.cta-btn__title {
+    @apply text-base flex items-center justify-start text-left uppercase w-full text-gray-dark font-medium tracking-wide font-colombo uppercase leading-snug font-medium text-xl mb-8 md:text-3xl;
+    background-color: var(--green);
+    border-top: 1px solid var(--green);
+    border-bottom: 1px solid var(--green);
+    height: 140px;
+    line-height: 1.1;
+    padding: 0 0 0 1rem;
+}
+
+.cta-btn__title span {
+    @apply block text-gray-dark lg:pl-16 lg:pr-32;
+}
+
+.cta-btn__after {
+    @apply block absolute top-0 right-0;
+    z-index: 0;
+    height: 140px;
+    width: 55px;
+    right: 1px;
+}
+
+.cta-btn svg {
+    @apply h-full w-full;
+}
+
+.cta-btn__after svg path {
+    clip-path:url(#SVGID_4_);
+}
+
+.cta-btn .nf-before-form-content {
+    @apply hidden;
+}
+
+.cta-btn input[type="email"] {
+    @apply font-sans;
+    background: none !important;
+    outline: 0;
+    border: none !important;
+    border-bottom: 1px solid var(--dark-grey) !important;
+}
+
+.cta-btn .submit-container {
+    @apply hidden;
+}
+
+.cta-btn .nf-error,
+.cta-btn .nf-error-msg {
+    @apply font-sans;
+    font-size: 13px;
+    font-weight: normal;
+    text-transform: none;
+    text-align: left;
+}
+
+.cta-form {
+    @apply flex items-end justify-start lg:w-[470px];
+}
+
+.cta-form .nf-field-container {
+    margin: 0;
+}
+
+.cta-form .nf-form-content {
+    padding: 0;
+}
+
+@media only screen and (min-width: 768px) {
+    .cta-btn__grid {
+        padding: 0 140px 0 0;
+    }
+    .cta-btn__grid.cta-btn__button {
+        padding: 0 50% 0 0;
+    }
+}

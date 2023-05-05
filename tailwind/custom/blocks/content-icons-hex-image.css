@@ -1,0 +1,94 @@
+/* WHY */
+.cihi {
+    @apply relative bg-gray-dark pt-16;
+}
+
+.cihi__col {
+    @apply lg:pl-[50%];
+}
+
+.cihi__title {
+    @apply block text-white font-medium tracking-wide font-colombo uppercase leading-snug text-2xl mb-8 md:text-3xl xl:text-4xl 2xl:text-5xl;
+}
+
+.cihi__excerpt {
+    @apply mb-16 text-white;
+}
+
+.cihi__list ul {
+    @apply flex flex-wrap;
+}
+
+.cihi__list li {
+    @apply text-white w-1/2 lg:w-1/4 px-6 lg:px-0 lg:pr-12 pb-12;
+}
+
+.cihi__item {
+    @apply flex justify-center lg:justify-start w-full text-center lg:text-left;
+}
+
+.cihi__item img {
+    @apply block mx-auto lg:mx-0 mb-4;
+}
+
+.cihi__item span {
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.cihi__hero {
+    @apply p-8 pb-16 block float-left w-full;
+}
+
+.cihi__mask {
+   -webkit-mask: url('assets/img/hex.svg') center center / contain;
+   mask: url('assets/img/hex.svg') center center / contain;
+   -webkit-mask-repeat: no-repeat;
+   mask-repeat: no-repeat;
+   height: auto;
+   width: 100%;
+}
+
+.cihi__mask img {
+   @apply h-auto w-full;
+}
+
+@media only screen and (min-width: 600px) {
+    .cihi__hero {
+        @apply px-32 pt-8 pb-16;
+    }
+    .cihi__col {
+        @apply lg:pl-[42%];
+    }
+}
+
+
+@media only screen and (min-width: 1024px) {
+    .cihi__hero {
+        @apply p-0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform-origin: 0 0; /* origin left top */
+        transform: scale(0.5) translateX(-25%) translateY(-6rem);
+    }
+    .cihi {
+        @apply py-32;
+    }
+}
+
+@media only screen and (min-width: 1120px) {
+    .cihi__hero {
+        bottom: auto;
+        top: 0;
+        transform: scale(0.5) translateX(-25%) translateY(-4rem);
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .cihi__hero {
+        transform: scale(0.333) translateX(-25%) translateY(-4rem);
+    }
+}
+ 
+

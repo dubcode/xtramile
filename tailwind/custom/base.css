@@ -1,0 +1,82 @@
+/**
+ * Custom styles to immediately follow Tailwind’s `base` layer
+ *
+ * “Add things like base typography styles [or] opinionated global resets.”
+ *
+ * — from https://tailwindcss.com/docs/plugins#adding-base-styles
+ */
+
+/**
+ * This uses the background and foreground colors declared in the
+ * `theme.json` file and is applied both to the frontend and in the block
+ * editor.
+*/
+:root {
+	--black: rgba(0, 0, 0, 0.9);
+    --white: rgba(255, 255, 255, 0.9);
+	--white-dark: #F8F4EB;
+	--white-light: #F5F5F5;
+  	--yellow: #FEF250;
+	--green: #D4EAC8;
+	--dark-grey: #4c5454;
+	--gray-blue: #E6EDF1;
+	--gray-lighter: #e5e6e6;
+	--light-black: #212222;
+	--light-black-alpha: rgba(33, 34, 34, 0.7);
+}
+
+body {
+	@apply bg-white-light text-foreground font-sans;
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	scroll-behavior: smooth;
+}
+
+body {
+	@apply overflow-x-hidden overflow-y-scroll;
+}
+
+p {
+	@apply leading-snug text-lg;
+	line-height: 1.6;
+}
+
+#page,
+#content,
+#primary,
+#main {
+	@apply block min-h-screen w-full;
+}
+
+#page {
+	@apply block float-left w-full min-h-screen;
+}
+
+section {
+	@apply block float-left w-full;
+}
+
+
+.container {
+	@apply mx-auto;
+	width: 96%;
+	max-width: 1230px !important;
+}
+
+/* Gutenberg mods */
+
+.wp-block-image img {
+	height: auto;
+	width: 100%;
+}
+
+.wp-block-columns.has-background {
+	padding-top: 0;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}

@@ -1,0 +1,28 @@
+/* PAGE HERO */
+.cat-header {
+    @apply flex items-center justify-start min-h-screen w-full h-auto lg:min-h-[850px]; 
+    background-color: var(--dark-grey);
+    padding-top: calc(130px + 8rem);
+}
+
+.cat-intro {
+    @apply relative;
+}
+
+.cat-header__title {
+    @apply font-colombo text-white-dark font-medium uppercase block tracking-wide mb-8 text-5xl md:text-6xl;
+    line-height: 1.2;
+}
+
+.cat-header__sub-title {
+    @apply text-white-dark font-medium tracking-wide font-colombo uppercase leading-snug text-2xl mb-4;
+}
+
+.cat-header__bg-title {
+    @apply block absolute opacity-20 top-0 right-0 font-medium tracking-wide font-colombo uppercase leading-snug text-[1000px] md:text-[340px];
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #fff;
+    transform: translateX(0) translateY(-33.33%);
+}
+

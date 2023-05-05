@@ -1,0 +1,77 @@
+@import "./custom/file-header.css";
+/**
+ * The line above injects the WordPress file header. It needs to be first,
+ * before this comment.
+ */
+
+/**
+ * This injects custom `@font-face` rules.
+ */
+@import "./custom/fonts.css";
+
+/**
+ * This injects Tailwind's base styles and any base styles registered by
+ * plugins, then adds custom base styles.
+ */
+@import "tailwindcss/base";
+@import "./custom/base.css";
+
+/**
+ * This injects Tailwind's component classes and any component classes
+ * registered by plugins, then adds custom component classes.
+ *
+ * The `@import-glob` line imports all CSS files from the `components`
+ * directory (except for `components.css`, which is imported on the following
+ * line). This is meant to simplify the process of integrating styles from
+ * JavaScript components or WordPress plugins.
+ */
+@import "tailwindcss/components";
+@import-glob "./custom/components/**/!(components).css";
+@import "./custom/components/components.css";
+
+/**
+ * This injects Tailwind's utility classes and any utility classes registered
+ * by plugins, then adds custom utility classes.
+ */
+@import "tailwindcss/utilities";
+@import "./custom/utilities.css";
+
+
+/* Include all the blocks */
+@import "./custom/blocks/showreel-hero.css";
+@import "./custom/blocks/looper.css";
+@import "./custom/blocks/cta-bar.css";
+@import "./custom/blocks/cta-button.css";
+@import "./custom/blocks/services-grid.css";
+@import "./custom/blocks/two-hex-image-content.css";
+@import "./custom/blocks/clients.css";
+@import "./custom/blocks/articles.css";
+@import "./custom/blocks/results.css";
+@import "./custom/blocks/plain-header.css";
+@import "./custom/blocks/page-header.css";
+@import "./custom/blocks/page-header-two.css";
+@import "./custom/blocks/cat-header.css";
+@import "./custom/blocks/footer-cta.css";
+@import "./custom/blocks/two-col-content-hex-list.css";
+@import "./custom/blocks/two-col-content-list.css";
+@import "./custom/blocks/two-col-content-hex-image.css";
+@import "./custom/blocks/two-col-content-hex-cta.css";
+@import "./custom/blocks/three-col-offset-images.css";
+@import "./custom/blocks/team-members.css";
+@import "./custom/blocks/enquiry.css";
+@import "./custom/blocks/hex-stats.css";
+@import "./custom/blocks/hex-stat-content.css";
+@import "./custom/blocks/support-form.css";
+@import "./custom/blocks/case-feature-one.css";
+@import "./custom/blocks/why.css";
+@import "./custom/blocks/content-icons-hex-image.css";
+@import "./custom/blocks/team-slider.css";
+@import "./custom/blocks/jobs.css";
+@import "./custom/blocks/interested.css";
+
+/* Include all the layout */
+@import "./custom/layout/header.css";
+@import "./custom/layout/footer.css";
+@import "./custom/layout/aos.css";
+@import "./custom/layout/content-single.css";
+

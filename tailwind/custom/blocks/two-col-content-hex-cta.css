@@ -1,0 +1,58 @@
+.tcchx {
+    @apply pb-16 lg:pb-0;
+}
+
+.tcchx__grid {
+    @apply lg:flex;
+}
+
+.tcchx__grid-col {
+    @apply flex items-center relative overflow-visible lg:w-3/6;
+}
+
+.tcchx__grid-content {
+    @apply block py-16 text-gray-dark;
+}
+
+.tcchx__title,
+.tcchx__hex-title {
+    @apply block font-medium tracking-wide font-colombo uppercase leading-snug text-2xl mb-8 md:text-3xl xl:text-4xl 2xl:text-5xl;
+}
+
+.tcchx__hex-title {
+    @apply text-center md:text-left;
+}
+
+.tcchx__hex {
+    @apply flex items-center justify-center overflow-visible w-full h-auto;
+}
+
+.tcchx__grid-col-two {
+    transform: translateY(0);
+}
+
+.tcchx__hex svg {
+    @apply block w-full h-auto;
+    transform-origin: center center;
+    transform: rotate(-25deg);
+}
+
+.tcchx__hex svg path {
+    fill: var(--green);
+    stroke: transparent;
+}
+
+.tcchx__hex-content {
+    @apply absolute top-0 left-0 w-full h-full flex justify-center items-center;
+    padding: 0 20%;
+}
+
+.tcchx__hex-excerpt {
+    @apply hidden md:block;
+}
+
+@media only screen and (min-width: 1024px) {
+    .tcchx__grid-col-two {
+        transform: translateY(-12.5%);
+    }
+}

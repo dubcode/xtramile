@@ -1,0 +1,48 @@
+.tcoi__inner {
+    @apply relative max-w-[1536px] mx-auto;
+}
+
+.tcoi ul {
+    @apply px-8 md:px-0 relative md:flex md:justify-between;
+    transform: translateY(-6.25%);
+}
+
+.tcoi li {
+    @apply h-[360px] md:h-[585px] w-full mb-8 md:mb-0;
+}
+
+.tcoi__icon {
+    @apply absolute bottom-0 right-0 h-[387px] w-[433px];
+    z-index: -1;
+    transform: translateX(-25%) translateY(12.5%);
+}
+
+.tcoi__icon svg {
+    @apply block h-full w-full;
+}
+
+.tcoi__icon svg .st0 {
+    fill: var(--yellow);
+    stroke: var(--yellow);
+    stroke-miterlimit:10;
+    transform: rotate(0);
+    transform-origin: center center;
+    transition: all ease 0.3s
+}
+
+@media only screen and (min-width: 768px) {
+    .tcoi ul {
+        transform: translateY(12.5%);
+    }
+    .tcoi li {
+        width: calc(33.33% - 1rem);
+    }
+
+    .tcoi li:nth-child(even) {
+        transform: translateY(-25%);
+    }
+    
+    .tcoi li:nth-child(odd) {
+        transform: translateY(-50%);
+    }
+}

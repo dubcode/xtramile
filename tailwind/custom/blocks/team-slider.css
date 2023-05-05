@@ -1,0 +1,120 @@
+.team-block {
+    @apply relative bg-white-dark py-16;
+}
+
+.team-block__title {
+    @apply block text-center text-gray-dark font-medium tracking-wide font-colombo uppercase leading-snug text-2xl mb-16 md:text-3xl xl:text-4xl 2xl:text-5xl;
+}
+
+.team__excerpt {
+    @apply lg:pr-[25%];
+}
+
+.team-slider__mask {
+    -webkit-mask: url('assets/img/hex.svg') center center / contain;
+    mask: url('assets/img/hex.svg') center center / contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    height: auto;
+    width: 100%;
+}
+ 
+.team-slider__mask img {
+    @apply h-auto w-full;
+}
+
+.team-slider__member {
+    @apply relative xl:flex xl:justify-start px-0 md:px-8 xl:px-32;
+}
+
+.team-slider__thumbnail {
+    @apply w-full mx-auto xl:mx-0 max-w-[400px] xl:max-w-none xl:w-1/4;
+}
+
+.team-slider__content {
+    @apply flex items-center justify-center text-center xl:text-left text-gray-dark xl:text-white pt-4 xl:pt-0 xl:bg-gray-dark relative w-full xl:w-3/4 xl:pl-8;
+}
+
+.team-slider__after {
+    @apply bg-white-dark hidden xl:block h-full w-auto;
+    z-index: 0;
+}
+
+.team-slider__after svg {
+    height: calc(100% + 1px);
+    width: auto;
+    transform: translateY(-1px);
+}
+
+.team-slider__after svg path {
+    clip-path:url(#SVGID_4_);
+}
+
+.team-slider__title {
+    @apply block text-gray-dark xl:text-white-dark text-center xl:text-left font-medium tracking-wide font-colombo uppercase leading-snug mb-4 text-2xl w-full;
+}
+
+.team-block__controls {
+    @apply block absolute left-0 top-[calc(50%-26px)] w-full;
+    pointer-events: none;
+}
+
+.team-block__slider-control-button {
+    @apply hidden md:inline-block;
+    height: 54px;
+    width: 60px;
+    pointer-events: all;
+}
+
+.team-block__slider-control-button:hover {
+    cursor: pointer;
+}
+
+.team-block__slider-control-button svg {
+    display: block;
+    height: 100%;
+    width: 100%;
+    overflow: visible;
+}
+
+.team-block__slider-control-button svg .st0 {
+    fill: transparent;
+    stroke: var(--dark-grey);
+    stroke-miterlimit:10;
+    transform: rotate(0);
+    transform-origin: center center;
+    transition: all ease 0.3s
+}
+
+.team-block__slider-control-button.prev:hover svg .st0 {
+    transform: rotate(-30deg);
+    fill: var(--light-black);
+}
+
+.team-block__slider-control-button.next {
+    float: right;
+}
+
+.team-block__slider-control-button.next:hover svg .st0 {
+    transform: rotate(30deg);
+    fill: var(--light-black);
+}
+
+.team-block__slider-control-button svg .st1{
+    fill: var(--dark-grey);
+    transition: all ease 0.3s
+}
+
+.team-block__slider-control-button:hover svg .st1{
+    fill: var(--green);
+}
+
+@media only screen and (min-width: 1280px) {
+    .team-slider__thumbnail {
+        background: rgb(76,84,84);
+        background: -moz-linear-gradient(90deg, rgba(76,84,84,0) 50%, rgba(76,84,84,1) 50%, rgba(76,84,84,1) 100%);
+        background: -webkit-linear-gradient(90deg, rgba(76,84,84,0) 50%, rgba(76,84,84,1) 50%, rgba(76,84,84,1) 100%);
+        background: linear-gradient(90deg, rgba(76,84,84,0) 50%, rgba(76,84,84,1) 50%, rgba(76,84,84,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#4c5454",endColorstr="#4c5454",GradientType=1);
+    }
+}

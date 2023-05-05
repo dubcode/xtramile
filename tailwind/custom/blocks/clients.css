@@ -1,0 +1,32 @@
+/* BLOCK - Our Clients */
+.oc {
+    @apply bg-black-light md:bg-black-light md:pt-[calc(4rem-15px)];
+}
+
+.oc__title {
+    @apply inline-block text-white-dark font-medium tracking-wide font-colombo uppercase leading-snug mt-8 md:mt-32 mb-8 text-[40px] md:text-3xl xl:text-4xl 2xl:text-5xl;
+}
+
+.oc__intro {
+    @apply text-center;
+}
+
+.oc__intro p {
+    @apply block leading-snug text-lg text-white-dark mb-4 lg:px-[12.5%] xl:px-[16.66%] 2xl:px-[25%];
+}
+
+.oc__hero img {
+    @apply my-[4rem] mx-auto w-full h-auto max-w-[768px];
+}
+
+.oc__wrapper {
+    @apply block w-full;
+}
+
+.oc__grid {
+    @apply flex flex-wrap w-full max-w-[1024px] mx-auto mt-0 mb-8;
+}
+
+.oc__cell {
+    @apply flex items-center justify-center w-1/2 lg:w-1/4 p-4 lg:p-8;
+}

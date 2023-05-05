@@ -1,0 +1,73 @@
+/* BLOCK - GTK */
+.thic {
+    @apply bg-white-light pb-16;
+    padding-top: calc(8rem - 15px);
+}
+
+.thic__grid {
+    @apply md:flex;
+}
+
+.thic__content,
+.thic__hero {
+    @apply relative  md:w-2/4;
+}
+
+.thic__title {
+    @apply inline-block text-gray-dark font-medium tracking-wide font-colombo uppercase leading-snug mt-0 md:mt-32 mb-0 text-[40px] md:text-3xl xl:text-4xl 2xl:text-5xl;
+}
+
+.thic__content p {
+    @apply block leading-snug text-lg text-gray-dark mb-8 lg:pr-[25%] xl:pr-[33.33%];
+}
+
+.thic__content img {
+    transform: translateX(25%) translateY(25%);
+    z-index: 3;
+}
+
+.thic__hero img {
+    transform-origin: top left;
+    transform: translateX(-50%) scale(1);
+}
+
+.thic.style-two .thic__icon {
+    @apply hidden;
+}
+
+.thic__icon {
+    @apply hidden xl:block h-full w-full;
+}
+
+.thic__icon svg {
+    @apply block h-full w-full;
+}
+
+.thic__icon svg .st0 {
+    fill: var(--green);
+    stroke: var(--green);
+    stroke-miterlimit:10;
+    transform: rotate(0);
+    transform-origin: center center;
+    transition: all ease 0.3s
+}
+
+@media only screen and (min-width: 768px) {
+    .thic__content img {
+        transform: translateX(0) translateY(4rem);
+    }
+    .thic__hero img {
+        transform: translateX(0) scale(1.5);
+    }
+    .thic__icon {
+        @apply absolute top-auto bottom-0 left-auto right-0 h-auto w-3/6;
+        transform-origin: center center;
+        transform: translateX(12.5%) translateY(12.5%) rotate(45deg) scale(1.33);
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .thic {
+        @apply pb-0;
+    }
+}

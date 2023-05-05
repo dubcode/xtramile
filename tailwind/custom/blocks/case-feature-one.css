@@ -1,0 +1,68 @@
+.csfo {
+    @apply relative overflow-hidden bg-white-light text-gray-dark py-32;
+}
+
+.csfo.csfo-dark {
+    @apply bg-black-light text-white;
+}
+
+.csfo__grid {
+    @apply relative lg:flex lg:items-center lg:justify-center;
+    z-index: 2;
+}
+
+.csfo__col {
+    @apply w-full lg:w-2/4;
+}
+
+.csfo__content {
+    @apply lg:pr-8;
+}
+
+.csfo__title {
+    @apply block font-medium tracking-wide font-colombo uppercase leading-snug text-2xl mb-8;
+}
+
+.csfo__hex-one {
+    @apply hidden md:block absolute bottom-0 left-0 h-[249px] w-full lg:w-[278px] xl:h-[321px] xl:w-[360px];
+    transform: rotate(-15deg) translateX(-16.75%) translateY(16.75%);
+    transform-origin: center center;
+}
+
+.csfo__hex-one svg .st0 {
+    fill: var(--yellow);
+    stroke: var(--yellow);
+}
+
+.csfo__hex-two {
+    @apply hidden lg:block absolute top-0 left-[33.33%] h-[249px] w-full lg:w-[278px] xl:h-[321px] xl:w-[360px];
+    transform: rotate(-15deg) translateX(0) translateY(0) scale(0.66);
+    transform-origin: center center;
+}
+
+.csfo__hex-two svg .st0 {
+    fill: var(--green);
+    stroke: var(--green);
+}
+
+.csfo.csfo-dark .csfo__hex-one {
+    @apply hidden md:block absolute bottom-0 left-[calc(50%-320px)] h-[249px] w-full lg:w-[278px] xl:h-[321px] xl:w-[360px];
+    transform: rotate(-15deg) translateY(16.75%);
+    transform-origin: center center;
+}
+
+.csfo.csfo-dark .csfo__hex-one svg .st0 {
+    fill: var(--green);
+    stroke: var(--green);
+}
+
+.csfo.csfo-dark .csfo__hex-two {
+    @apply hidden lg:block absolute top-0 left-[80%] h-[249px] w-full lg:w-[278px] xl:h-[321px] xl:w-[360px];
+    transform: rotate(-15deg) translateX(0) translateY(-66%) scale(1.5);
+    transform-origin: center center;
+}
+
+.csfo.csfo-dark .csfo__hex-two svg .st0 {
+    fill: var(--yellow);
+    stroke: var(--yellow);
+}

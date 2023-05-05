@@ -1,0 +1,14 @@
+/**
+ * Custom `@font-face` rules
+ *
+ * These will be added immediately before Tailwind’s `base` layer.
+ */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap');
+
+@font-face {
+    font-family: 'Colombo';
+    src: url('assets/fonts/colombo.woff') format('woff'),
+        url('assets/fonts/colombo.eot') format('eot'),
+        url('assets/fonts/colombo.otf') format('opentype'),
+        url('assets/fonts/colombo.ttf') format('truetype');
+}

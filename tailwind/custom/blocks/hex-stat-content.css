@@ -1,0 +1,83 @@
+.hxsc {
+    @apply relative overflow-hidden bg-white-light text-gray-dark py-64;
+}
+
+.hxsc.hxsc-dark {
+    @apply bg-black-light text-white;
+}
+
+.hxsc__grid {
+    @apply relative lg:flex lg:items-center lg:justify-center;
+    z-index: 2;
+}
+
+.hxsc__col {
+    @apply w-full lg:w-2/4;
+}
+
+.hxsc__content {
+    @apply flex items-center justify-center lg:pr-8;
+}
+
+.hxsc__title {
+    @apply block font-medium tracking-wide font-colombo uppercase leading-snug text-2xl mb-8;
+}
+
+.hxsc__hex-one {
+    @apply hidden md:block absolute bottom-0 right-0 h-[249px] w-full lg:w-[278px] xl:h-[321px] xl:w-[360px];
+    transform: rotate(-15deg) translateX(16.75%) translateY(33%);
+    transform-origin: center center;
+}
+
+.hxsc__hex-one svg .st0 {
+    fill: var(--green);
+    stroke: var(--green);
+}
+
+.hxsc__hex-two {
+    @apply hidden lg:block absolute top-0 left-[25%] h-[249px] w-full lg:w-[278px] xl:h-[321px] xl:w-[360px];
+    transform: rotate(-15deg) translateX(0) translateY(-33%);
+    transform-origin: center center;
+}
+
+.hxsc__hex-two svg .st0 {
+    fill: var(--yellow);
+    stroke: var(--yellow);
+}
+
+.hxsc__stat {
+    flex-grow: 0;
+    flex-shrink: 0;
+    @apply relative h-[249px] w-full lg:h-[474px] lg:w-[424px] mb-8;
+}
+
+.hxsc__stat .hxsc__stat__list-content {
+    @apply text-gray-dark;
+}
+
+.hxsc__stat__icon,
+.hxsc__stat__icon svg {
+    @apply block h-full w-full;
+}
+
+.hxsc__stat__icon svg .st0 {
+    fill: var(--white-light);
+    stroke: var(--dark-grey);
+    stroke-width: 0.1px;
+    stroke-miterlimit:10;
+    transition: all ease 0.3s
+}
+
+.hxsc__stat__list-inner {
+    @apply flex items-center justify-center absolute h-full w-full top-0 left-0 text-left px-16;
+    color: var(--white-dark);
+}
+
+.hxsc__stat__list-title {
+    @apply block font-medium tracking-wide font-colombo uppercase text-4xl pb-2 mb-2;
+    line-height: 2rem;
+    border-bottom: 1px solid var(--dark-grey);
+}
+
+
+

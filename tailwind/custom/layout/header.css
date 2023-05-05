@@ -1,0 +1,299 @@
+#masthead {
+    @apply bg-transparent fixed top-0 left-0 h-screen w-full pointer-events-none z-50 lg:h-auto;
+    backdrop-filter: blur(0);
+    background-color: rgba(255, 255, 255, 0);
+    transition: background-color ease 0.3s;
+}
+
+#masthead.nav-active {
+    backdrop-filter: blur(15px);
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.masthead__inner {
+    @apply block h-full py-4 w-full lg:flex lg:h-auto lg:items-center lg:justify-between pointer-events-none;
+}
+
+.masthead__logo {
+    @apply w-full lg:w-[100px] pointer-events-auto;
+}
+
+.masthead__logo img {
+    @apply h-auto mx-auto lg:mx-0 w-24;
+}
+
+.masthead__menu {
+    height: calc(100vh - 161px - 4em);
+    @apply hidden items-center w-full lg:w-auto lg:h-auto lg:flex lg:flex-grow lg:justify-center pointer-events-auto;
+}
+
+.nav-active .masthead__menu {
+    @apply flex justify-start lg:justify-center;
+}
+
+
+.masthead__menu {
+    @apply hidden lg:block flex-grow flex justify-center pointer-events-auto;
+}
+
+
+.masthead__nav {
+    @apply block lg:flex lg:justify-end list-none p-0 m-0 w-auto;
+}
+
+.masthead__nav > li {
+    @apply relative;
+}
+
+.masthead__nav a {
+    @apply block text-white text-3xl lg:text-lg py-6 lg:py-2 pr-16 no-underline;
+}
+
+.masthead__nav > li:last-child {
+    @apply relative;
+}
+
+body.scrolled .masthead__nav a,
+body.single-results .masthead__nav a,
+body.page-id-459 .masthead__nav a {
+    @apply text-gray-700;
+}
+
+.masthead__nav a:hover {
+    @apply text-yellow;
+}
+
+.masthead__nav .sub-menu {
+    @apply hidden lg:absolute lg:left-0 lg:w-[200px] lg:bg-white list-none m-0 px-6 lg:p-0;
+}
+
+.masthead__nav .sub-menu li {
+    @apply relative w-full overflow-hidden;
+}
+
+.masthead__nav .sub-menu li::before {
+    @apply absolute block top-0 left-0 h-full w-full bg-yellow z-0 translate-x-full;
+    content: "";
+    transition: transform ease 0.3s;
+}
+
+.masthead__nav .sub-menu li:nth-child(even)::before {
+    @apply -translate-x-[100%];
+    content: "";
+    transition: transform ease-out 0.3s;
+}
+
+.masthead__nav li.menu-item-has-children {
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18px' height='10px' viewBox='0 0 18 10'%3E%3Cg stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg transform='translate(-327.000000, -10230.000000)' fill='%23FEF250' fill-rule='nonzero'%3E%3Cg transform='translate(0.000000, 9875.000000)'%3E%3Cg id='Row' transform='translate(30.000000, 346.000000)'%3E%3Cpath d='M314.858272,9.43858553 L314.571829,9.14551659 C314.382193,8.95149447 314.075538,8.95149447 313.885942,9.14551659 L306.002259,17.2156758 L298.114557,9.14551659 C297.924921,8.95149447 297.618305,8.95149447 297.42867,9.14551659 L297.142227,9.43858553 C296.952591,9.63260765 296.952591,9.94635669 297.142227,10.1403385 L305.655296,18.8544834 C305.844892,19.0485055 306.151548,19.0485055 306.341183,18.8544834 L314.854253,10.1403385 C315.047907,9.94635669 315.047907,9.63260765 314.858272,9.43858553 Z' id='chevron-down-white'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-size: 10px auto;
+    background-repeat: no-repeat;
+    background-position: 70% center;
+}
+
+#masthead.nav-active .masthead__nav li.menu-item-has-children:hover {
+    background: none;
+}
+
+.masthead__nav .sub-menu li:hover::before {
+    @apply translate-x-0;
+}
+
+.masthead__nav .sub-menu a {
+    @apply relative text-black py-2 px-4 whitespace-nowrap;
+}
+
+.masthead__nav > li:hover .sub-menu {
+    @apply block;
+}
+
+.masthead__end {
+    @apply absolute bottom-0 left-0 w-full flex justify-start lg:justify-end lg:w-[360px] lg:relative lg:top-auto lg:left-auto pointer-events-auto;
+}
+
+.masthead__end-inner {
+    @apply pb-4 px-4 w-full block lg:flex lg:w-auto lg:pb-0 lg:px-0; 
+}
+
+.masthead svg {
+    @apply items-center justify-center h-[48px] w-auto;
+}
+
+.masthead__search {
+	@apply hidden lg:block;
+}
+
+.masthead__search svg {
+	@apply block h-[48px] w-auto;
+}
+
+.masthead__search-border {
+    fill: none;
+    stroke: var(--yellow);
+    transition: fill ease 0.3s;
+}
+
+.masthead__search:hover {
+    @apply cursor-pointer;
+}
+
+.masthead__search:hover .masthead__search-border {
+    fill: var(--yellow);
+}
+
+.masthead__search-icon {
+    fill: var(--yellow);
+    transition: fill ease 0.3s;
+}
+
+.masthead__search:hover .masthead__search-icon {
+    fill: var(--black);
+}
+
+
+.masthead__button {
+	@apply relative flex float-left items-center justify-center h-[48px] w-auto text-black block uppercase no-underline transition-all duration-300 lg:float-none lg:mr-6;
+}
+
+.masthead__button svg {
+	@apply block h-[48px] w-auto;
+}
+
+
+.masthead__button svg path {
+    fill: var(--yellow);
+    stroke: var(--yellow);
+    transition: all ease 0.3s;
+}
+
+.masthead__button:hover svg path {
+    fill: var(--white);
+    stroke: var(--white);
+}
+
+.masthead__button-label {
+    @apply flex items-center justify-center absolute z-10 top-0 left-0 h-full w-full;
+}
+
+.masthead__hamburger {
+@apply block float-right overflow-visible my-2 p-0 cursor-pointer border-0 bg-transparent opacity-70 lg:hidden;
+}
+
+.masthead__hamburger:hover,
+.nav-active .masthead__hamburger {
+@apply opacity-100;
+}
+
+.masthead__hamburger-box {
+@apply relative inline-block w-6 h-6;
+}
+
+.masthead__hamburger-inner {
+@apply block mt-[-2px] top-auto bottom-0;
+}
+
+.masthead__hamburger-inner,
+.masthead__hamburger-inner::after,
+.masthead__hamburger-inner::before {
+@apply absolute w-6 h-0.5 rounded bg-yellow;
+transition: all ease 0.3s;
+}
+
+.masthead__hamburger-inner::after,
+.masthead__hamburger-inner::before {
+@apply block;
+content: "";
+}
+
+.masthead__hamburger-inner::before {
+@apply -mt-2.5;
+}
+
+.masthead__hamburger-inner::after {
+@apply -mt-5;
+}
+
+.nav-active .masthead__hamburger-inner {
+@apply -translate-y-2.5 rotate-[-45deg];
+}
+
+.nav-active .masthead__hamburger-inner::after {
+@apply mt-0 opacity-0;
+}
+
+.nav-active .masthead__hamburger-inner::before {
+@apply mt-0 -rotate-90;
+}
+
+@media only screen and (min-width: 1024px) {
+    #masthead,
+    #masthead.nav-active {
+        backdrop-filter: blur(0);
+        background-color: rgba(255, 255, 255, 0);
+    }
+    body.scrolled #masthead {
+        backdrop-filter: blur(15px);
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+    #masthead.nav-active .masthead__nav li.menu-item-has-children {
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18px' height='10px' viewBox='0 0 18 10'%3E%3Cg stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg transform='translate(-327.000000, -10230.000000)' fill='%23FEF250' fill-rule='nonzero'%3E%3Cg transform='translate(0.000000, 9875.000000)'%3E%3Cg id='Row' transform='translate(30.000000, 346.000000)'%3E%3Cpath d='M314.858272,9.43858553 L314.571829,9.14551659 C314.382193,8.95149447 314.075538,8.95149447 313.885942,9.14551659 L306.002259,17.2156758 L298.114557,9.14551659 C297.924921,8.95149447 297.618305,8.95149447 297.42867,9.14551659 L297.142227,9.43858553 C296.952591,9.63260765 296.952591,9.94635669 297.142227,10.1403385 L305.655296,18.8544834 C305.844892,19.0485055 306.151548,19.0485055 306.341183,18.8544834 L314.854253,10.1403385 C315.047907,9.94635669 315.047907,9.63260765 314.858272,9.43858553 Z' id='chevron-down-white'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        background-size: 10px auto;
+        background-repeat: no-repeat;
+        background-position: right center;
+    }
+}
+
+/* BUTTONS */
+.cta {
+	@apply relative flex float-none items-center justify-start h-[48px] w-[247px] text-black block uppercase no-underline transition-all duration-300 lg:mr-6;
+}
+
+.cta:hover {
+    cursor: pointer;
+}
+
+.cta svg {
+	@apply block h-full w-full;
+}
+
+
+.cta svg path {
+    fill: var(--yellow);
+    stroke: var(--yellow);
+    transition: all ease 0.3s;
+}
+
+.cta.grey__button svg path {
+    fill: var(--dark-grey);
+    stroke: var(--dark-grey);
+}
+
+.cta.yellow__button svg path {
+    fill: var(--yellow);
+    stroke: var(--yellow);
+}
+
+.cta:hover svg path {
+    fill: var(--white-dark);
+    stroke: var(--white-dark);
+}
+
+.cta.grey__button:hover svg path {
+    stroke: var(--dark-grey);
+}
+
+.cta-label {
+    @apply flex h-full w-full justify-center items-center absolute z-10 top-0 left-0;
+}
+
+.cta-label span {
+    @apply block text-gray-700;
+    transition: color ease 0.3s;
+}
+
+.cta.grey__button .cta-label span {
+    @apply text-yellow;
+}
+
+.cta.grey__button:hover .cta-label span {
+    @apply text-gray-700;
+}

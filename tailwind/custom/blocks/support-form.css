@@ -1,0 +1,91 @@
+.support__form {
+    @apply bg-green text-gray-dark flex items-center justify-center relative min-h-screen w-full lg:h-auto pt-36 lg:pt-64 pb-32;
+}
+
+.support__form .container {
+    @apply relative;
+}
+
+.support__grid {
+    @apply flex flex-wrap items-start justify-center lg:justify-start relative w-full;
+}
+
+.support__content {
+    @apply mb-8 lg:mb-0 lg:w-3/6 xl:w-[40%] lg:pr-16;
+}
+
+.support__ninja {
+    @apply lg:bg-white-dark pt-8 lg:w-3/6 xl:w-[60%] lg:px-16;
+}
+
+.support__title {
+    @apply text-center lg:text-left font-colombo font-medium uppercase block tracking-wide mb-8 text-5xl md:text-6xl;
+    line-height: 1.2;
+}
+
+.support__excerpt p {
+    @apply block leading-snug text-lg text-center lg:text-left mb-4 lg:pr-[12.5%] xl:pr-[16.66%] 2xl:pr-[25%];
+}
+
+.sf__mask-one,
+.sf__mask-two,
+.sf__hex-one,
+.sf__hex-two {
+    display: none;
+}
+@media only screen and (min-width: 1024px) {
+
+    .sf__mask-one,
+    .sf__mask-two,
+    .sf__hex-one,
+    .sf__hex-two  {
+        display: block;
+    }
+
+    .sf__mask-one,
+    .sf__mask-two {
+        -webkit-mask: url('assets/img/hex.svg') center center / contain;
+        mask: url('assets/img/hex.svg') center center / contain;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        height: 345px;
+        width: 386px;
+        position: absolute;
+        bottom: -5rem;
+        left: 0;
+    }
+
+    .sf__mask-one img,
+    .sf__mask-two img {
+        @apply h-auto w-full;
+    }
+
+    .sf__mask-two {
+        height: 251px;
+        width: 281px;
+        bottom: 37%;
+        left: 19.33%;
+    }
+
+    .sf__hex-one {
+        @apply hidden md:block absolute bottom-0 left-0 h-[249px] w-full lg:w-[278px] xl:h-[321px] xl:w-[360px];
+        transform: rotate(-15deg) translateX(25%) translateY(60%) scale(0.5);
+        transform-origin: center center;
+    }
+
+    .sf__hex-one svg .st0 {
+        fill: var(--yellow);
+        stroke: var(--yellow);
+    }
+
+    .sf__hex-two {
+        @apply hidden md:block absolute bottom-0 left-0 h-[249px] w-[278px] translate-x-[83%] lg:translate-x-[100%] translate-y-[-125%] 2xl:translate-y-[-91%] rotate-[-15deg] 2xl:h-[321px] 2xl:w-[360px];
+        transform-origin: center center;
+    }
+
+    .sf__hex-two svg .st0 {
+        fill: var(--dark-grey);
+        stroke: var(--dark-grey);
+    }
+
+}

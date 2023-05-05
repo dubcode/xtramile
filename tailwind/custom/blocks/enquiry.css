@@ -1,0 +1,99 @@
+.enquiry {
+    @apply relative overflow-hidden bg-black-light py-8 text-white-light;
+}
+
+.enquiry__grid {
+    @apply py-16 md:flex md:justify-between;
+}
+
+.enquiry__col {
+    @apply md:w-[calc(50%-4rem)];
+}
+
+.enquiry__title {
+    @apply block text-white-dark font-medium tracking-wide font-colombo uppercase leading-snug text-2xl w-full pb-6;
+}
+
+.enquiry__tel {
+    @apply font-colombo text-yellow font-medium uppercase block tracking-wide mb-8 text-5xl md:text-6xl;
+    line-height: 1.2;
+}
+
+.enquiry__hex-wrapper {
+    transform: translateX(-25%) translateY(12.5%);
+    @apply hidden md:block w-4/6 absolute bottom-0 max-w-[675px];
+}
+
+.enquiry__hex {
+    @apply flex items-center justify-center overflow-visible w-full h-auto;
+}
+
+.enquiry__hex-title {
+    @apply block text-center md:text-left font-medium tracking-wide font-colombo uppercase leading-snug text-2xl mb-8 md:text-3xl xl:text-[30px];
+}
+
+.enquiry__hex-excerpt {
+    @apply mb-8;
+}
+.enquiry__hex svg {
+    @apply block w-full h-auto;
+    transform-origin: center center;
+    transform: rotate(-25deg);
+}
+
+.enquiry__hex svg path {
+    fill: var(--yellow);
+    stroke: transparent;
+}
+
+.enquiry__hex-content {
+    @apply text-gray-dark absolute top-0 left-0 w-full h-full flex justify-center items-start;
+    padding: 20% 20% 0 20%;
+}
+
+.enquiry__hex-excerpt {
+    @apply hidden md:block;
+}
+
+.enquiry__col #nf-form-1-cont input,
+.enquiry__col #nf-form-1-cont textarea {
+    background: none;
+    outline: 0;
+    border: none;
+    border-bottom: 1px solid var(--dark-grey);
+}
+
+.enquiry__col #nf-form-1-cont .label-right .nf-field-label {
+    @apply items-start;
+}
+
+.enquiry__col #nf-form-1-cont .checkbox-container.label-right .field-wrap > div {
+    @apply w-auto pr-2;
+}
+
+.enquiry__col #nf-form-1-cont .label-right .nf-field-description {
+    @apply mr-0;
+}
+
+.enquiry__col #nf-form-1-cont input[type="submit"] {
+    @apply bg-yellow p-0 w-28 leading-10 flex items-center justify-center text-base text-center uppercase text-gray-dark;
+    border: none;
+}
+
+@media only screen and (min-width: 1024px) {
+    .enquiry__hex-wrapper {
+        @apply w-2/4;
+        transform: translateX(-12.5%) translateY(12.5%);
+    }
+    .enquiry__col {
+        @apply md:w-[calc(50%-6rem)];
+    }
+    
+}
+
+@media only screen and (min-width: 1280px) {
+    .enquiry__hex-wrapper {
+        @apply w-2/4;
+        transform: translateX(-12.5%) translateY(20%);
+    }
+}
