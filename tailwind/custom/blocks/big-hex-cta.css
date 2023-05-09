@@ -1,0 +1,8 @@
+
+.big-hex-cta {
+    @apply relative w-full md:h-[294px];
+}
+
+.big-hex-cta .enquiry__hex-wrapper {
+    @apply relative translate-x-[33.33%] translate-y-[-6rem] lg:translate-x-[100%];
+}

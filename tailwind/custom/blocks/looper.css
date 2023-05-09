@@ -40,6 +40,7 @@
     -webkit-text-stroke-color: var(--dark-grey);
     opacity: 0.2;
     transform: translateX(-10%) translateY(33.33%);
+    pointer-events: none;
 }
 
 .looper__excerpt-wrapper {

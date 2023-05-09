@@ -84,6 +84,37 @@
     padding: 0;
 }
 
+.cta-btn__icon {
+    display: inline-block;
+    height: 54px;
+    width: 60px;
+    overflow: visible;
+}
+
+.cta-btn__icon svg {
+    display: block;
+    height: 100%;
+    width: 100%;
+    overflow: visible;
+}
+
+.cta-btn__icon svg .st0 {
+    fill: var(--dark-grey);
+    stroke: var(--dark-grey);
+    stroke-miterlimit:10;
+    transform: rotate(0);
+    transform-origin: center center;
+    transition: all ease 0.3s
+}
+
+.cta-btn:hover .cta-btn__icon svg .st0 {
+    transform: rotate(-20deg);
+}
+
+.cta-btn__icon svg .st1{
+    fill: var(--yellow);
+}
+
 @media only screen and (min-width: 768px) {
     .cta-btn__grid {
         padding: 0 140px 0 0;

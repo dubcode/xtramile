@@ -1,5 +1,5 @@
 .hxsc {
-    @apply relative overflow-hidden bg-white-light text-gray-dark py-64;
+    @apply relative overflow-hidden bg-white-light text-gray-dark py-32 lg:py-64;
 }
 
 .hxsc.hxsc-dark {
@@ -35,8 +35,7 @@
 }
 
 .hxsc__hex-two {
-    @apply hidden lg:block absolute top-0 left-[25%] h-[249px] w-full lg:w-[278px] xl:h-[321px] xl:w-[360px];
-    transform: rotate(-15deg) translateX(0) translateY(-33%);
+    @apply h-[249px] w-full absolute top-0 left-[25%] translate-x-[-25%] translate-y-[-66%] max-w-[270px] rotate-[-15deg]  lg:translate-x-[0] lg:translate-y-[-33%] lg:w-[278px] xl:h-[321px] xl:w-[360px];
     transform-origin: center center;
 }
 

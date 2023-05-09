@@ -76,8 +76,29 @@
 }
 
 .enquiry__col #nf-form-1-cont input[type="submit"] {
-    @apply bg-yellow p-0 w-28 leading-10 flex items-center justify-center text-base text-center uppercase text-gray-dark;
+    @apply relative bg-yellow p-0 h-[53.5px] w-[116px] leading-10 block text-base text-center uppercase text-gray-dark;
+    line-height: 54px;
     border: none;
+}
+
+.enquiry__col #nf-form-1-cont .field-wrap.submit-wrap {
+    @apply relative block w-[116px] translate-x-[22px] overflow-visible;
+}
+
+.enquiry__col #nf-form-1-cont .field-wrap.submit-wrap::before {
+    @apply block absolute left-0 top-0 w-[21px] h-[55px] translate-x-[-20.5px] translate-y-[-0.5px];
+    content: "";
+    z-index: 2; 
+    background-image: url("assets/img/end-l-yellow.svg");
+    background-size: 100% 100%;
+}
+
+.enquiry__col #nf-form-1-cont .field-wrap.submit-wrap::after {
+    @apply block absolute right-0 top-0 w-[21px] h-[55px] translate-x-[20px] translate-y-[-0.5px];
+    content: "";
+    z-index: 2; 
+    background-image: url("assets/img/end-r-yellow.svg");
+    background-size: 100% 100%;
 }
 
 @media only screen and (min-width: 1024px) {

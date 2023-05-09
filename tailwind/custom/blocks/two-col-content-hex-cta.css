@@ -20,7 +20,7 @@
 }
 
 .tcchx__hex-title {
-    @apply text-center md:text-left;
+    @apply text-center md:text-left mb-4 xl:mb-8;
 }
 
 .tcchx__hex {
@@ -48,7 +48,7 @@
 }
 
 .tcchx__hex-excerpt {
-    @apply hidden md:block;
+    @apply hidden md:block mb-4 xl:mb-8;
 }
 
 @media only screen and (min-width: 1024px) {

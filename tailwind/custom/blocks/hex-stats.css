@@ -57,7 +57,7 @@
 }
 
 .hex-stats__stats ul li .hex-stats__list-content {
-    @apply text-gray-dark;
+    @apply text-gray-dark mx-auto max-w-[200px] 2xl:max-w-[240px];
 }
 
 .hex-stats__stats ul li.hex-stats__grey  .hex-stats__list-content {
@@ -96,7 +96,7 @@
 }
 
 .hex-stats__list-inner {
-    @apply flex items-center justify-center absolute h-full w-full top-0 left-0 text-left px-24;
+    @apply flex items-center justify-center absolute h-full w-full top-0 left-0 text-left;
     color: var(--white-dark);
 }
 

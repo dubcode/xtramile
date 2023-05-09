@@ -68,6 +68,7 @@
 @import "./custom/blocks/team-slider.css";
 @import "./custom/blocks/jobs.css";
 @import "./custom/blocks/interested.css";
+@import "./custom/blocks/big-hex-cta.css";
 
 /* Include all the layout */
 @import "./custom/layout/header.css";

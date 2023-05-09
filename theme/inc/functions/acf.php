@@ -240,6 +240,18 @@ function emd_register_acf_blocks() {
             'keywords'          => array( 'results' ),
         ));
 
+        // Results
+        acf_register_block_type(array(
+            'name'              => 'top-results',
+            'title'             => __('Top Results'),
+            'description'       => __('Top Results'),
+            'render_template'   => 'template-parts/blocks/top-results.php',
+            'category'          => 'emd-blocks',
+            'icon'              => 'admin-post',
+            'mode'              => 'edit',
+            'keywords'          => array( 'results' ),
+        ));
+
         // Page Header
         acf_register_block_type(array(
             'name'              => 'page-header',
@@ -395,6 +407,19 @@ function emd_register_acf_blocks() {
             'mode'              => 'edit',
             'keywords'          => array( 'case-study', 'feature' ),
         ));
+
+        // Big Hex CTA
+        acf_register_block_type(array(
+            'name'              => 'big-hex-cta',
+            'title'             => __('Big Hex CTA'),
+            'description'       => __('Big Hex CTA'),
+            'render_template'   => 'template-parts/blocks/big-hex-cta.php',
+            'category'          => 'emd-blocks',
+            'icon'              => 'admin-post',
+            'mode'              => 'edit',
+            'keywords'          => array( 'hex', 'cta' ),
+        ));
+
 
     }
 }
